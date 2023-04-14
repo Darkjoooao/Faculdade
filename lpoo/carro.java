@@ -1,35 +1,67 @@
 public class Carro {
-     String modelo;
-     int nPortas;
-     int nPassageiros;
-     double velocidade;
-     boolean estaLigado;
-
+     private String modelo;
+     private int nPortas;
+     private int nPassageiros;
+     private double velocidade;
+     private boolean estaLigado;
+    
     public Carro(String mod, int nP, int nPas) {
-        modelo = mod;
-        nPortas = nP;
-        nPassageiros = nPas;
-        velocidade = 0.0;
-        estaLigado = false;
+        this.modelo = mod;
+        this.nPortas = nP;
+        this.nPassageiros = nPas;
+        this.velocidade = 0.0;
+        this.estaLigado = false;
     }
 
     public void ligaCarro() {
-        if (!estaLigado) {
-            estaLigado = true;
+        if (!this.estaLigado) {
+            this.estaLigado = true;
         }
     }
 
     public void acelerar(double novaV) {
-        if (estaLigado) {
-            velocidade += novaV;
+        if (this.estaLigado) {
+            this.velocidade += novaV;
         }
     }
 
     public void frear() {
-        velocidade = 0.0;
+        this.velocidade = 0.0;
     }
 
     public String devolveInformacoes() {
-        return "Carro de modelo " + modelo + " com " + nPassageiros + " passageiros";
+        return "Carro de modelo " + this.modelo + " com " + this.nPassageiros + " passageiros";
+    }
+
+    public String getModelo() {
+        return this.modelo;
+    }
+  
+    public int getnPortas() {
+        return this.nPortas;
+    }
+
+    public boolean getEstaLigado() {
+        return this.estaLigado;
+    }
+  
+    public double getVelocidade() {
+        return velocidade;
+    }
+  
+    public int getnPassageiros() {
+        return this.nPassageiros;
+    }  
+    
+    public void setnPassageiros(int nPassageiros) {
+        this.nPassageiros = nPassageiros;
+    }
+  
+    public void setVelocidade(double velocidade) {
+        this.velocidade = velocidade;
+    }
+  
+    public void setEstaLigado(boolean estaLigado) {
+        this.estaLigado = estaLigado;
     }
 }
