@@ -42,15 +42,15 @@ public class Apartamento{
     public boolean setNumQuartos(int quartos){
       if(quartos >= this.nMoradores){
         this.nQuartos = quartos;
-        return true
+        return true;
       } else return false;
     }
 
 
     public boolean setValorAluguel(int aluguel){
       if(aluguel >= 0){
-        this.valorAluguel = quartos;
-        return true
+        this.valorAluguel = aluguel;
+        return true;
       } else return false;
     }
   
